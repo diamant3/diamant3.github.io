@@ -1,0 +1,26 @@
+{
+  "name": "diamant3.github.io",
+  "version": "0.0.1",
+  "description": "Personal Site",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "build:gh-pages": "eleventy --pathprefix=/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diamant3/diamant3.github.io.git"
+  },
+  "keywords": [],
+  "author": "Diamond Rivero",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/diamant3/diamant3.github.io/issues"
+  },
+  "homepage": "https://github.com/diamant3/diamant3.github.io#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.8"
+  }
+}
