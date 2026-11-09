@@ -1,0 +1,19 @@
+---
+layout: layouts/base.liquid
+---
+<article>
+  <h1>{{ title }}</h1>
+  <time datetime="{{ date | date: '%Y-%m-%d' }}">{{ date | date: '%B %d, %Y' }}</time>
+
+  {{ content }}
+
+  {% if tags %}
+  <ul class="post-tags">
+    {% for t in tags %}
+      {% unless t == "posts" %}
+      <li><a href="/tags/{{ t | slugify }}/">{{ t }}</a></li>
+      {% endunless %}
+    {% endfor %}
+  </ul>
+  {% endif %}
+</article>

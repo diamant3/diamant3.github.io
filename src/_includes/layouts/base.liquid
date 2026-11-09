@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} - {{ site.title }}</title>
+  <meta name="description" content="{{ description | default: site.description }}">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <a href="/" class="site-title">{{ site.title }}</a>
+    <nav>
+      {{ collections.all | eleventyNavigation | eleventyNavigationToHtml }}
+    </nav>
+  </header>
+  <main>
+    {{ content }}
+  </main>
+  <footer>
+    <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}</p>
+  </footer>
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
