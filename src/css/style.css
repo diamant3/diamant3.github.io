@@ -1,0 +1,26 @@
+:root {
+  color-scheme: light dark;
+  --max-width: 42rem;
+}
+
+body {
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  max-width: var(--max-width);
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.post-tags {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
