@@ -17,3 +17,11 @@ layout: layouts/base.liquid
   </ul>
   {% endif %}
 </article>
+
+{% assign nextPost = collections.posts | getNextCollectionItem: page %}
+{% assign prevPost = collections.posts | getPreviousCollectionItem: page %}
+
+<nav class="post-nav">
+  {% if prevPost %}<a href="{{ prevPost.url }}">&larr; {{ prevPost.data.title }}</a>{% endif %}
+  {% if nextPost %}<a href="{{ nextPost.url }}">{{ nextPost.data.title }} &rarr;</a>{% endif %}
+</nav>
